@@ -22,7 +22,7 @@ public class ImageController {
     ImageRepository imageRepository;
 
     @PostMapping("/upload/image")
-    public ResponseEntity<ImageUploadResponse> uplaodImage(@RequestParam("image") MultipartFile file)
+    public ResponseEntity<ImageUploadResponse> uploadImage(@RequestParam("image") MultipartFile file)
             throws IOException {
 
         imageRepository.save(Image.builder()
